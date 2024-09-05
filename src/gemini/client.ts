@@ -1,3 +1,7 @@
+import {GoogleGenerativeAI} from '@google/generative-ai'
+
+const prompt = 'write passing tests for these functions'
+
 export default class GeminiClient {
   private GenAI: GoogleGenerativeAI
 
@@ -5,9 +9,10 @@ export default class GeminiClient {
     this.GenAI = new GoogleGenerativeAI(apiKey)
   }
 
-  async generateTests(prompt:string): Promise<string> {
+  async generateTests(prompt: string): Promise<string> {
     const model = this.GenAI.getGenerativeModel({model: 'gemini-1.5-pro'})
-    const result = await model.generateContent
+    const result = await model.generateContent(prompt)
     const response = await result.response
-    return response.text
-}}
+    return response.text()
+  }
+}

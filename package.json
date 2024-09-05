@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/uni/ai-auto-testgen/issues",
   "dependencies": {
+    "@google/generative-ai": "^0.17.1",
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
@@ -26,6 +27,7 @@
     "eslint-config-prettier": "^9",
     "mocha": "^10",
     "oclif": "^4",
+    "prettier": "3.3.3",
     "shx": "^0.3.3",
     "ts-node": "^10",
     "typescript": "^5"

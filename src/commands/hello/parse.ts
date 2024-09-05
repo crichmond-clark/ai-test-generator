@@ -4,6 +4,8 @@ import * as path from 'path'
 import {extractFunctionsFromFile} from '../../utils/extractFunctions.js'
 import GeminiClient from '../../gemini/client.js'
 
+const apiKey = process.env.API_KEY || ''
+
 export default class ParseFile extends Command {
   static override args = {
     file: Args.string({description: 'file to read', required: true}),
@@ -22,7 +24,7 @@ export default class ParseFile extends Command {
     const outputFilePath = path.join(path.dirname(args.file), `extracted_functions_${path.basename(args.file)}`)
     const outputFile = project.createSourceFile(outputFilePath)
 
-    const client = new GeminiClient('AIzaSyBx--3eNjtzV0JBbAyzTuBCLNW2qr13N34')
+    const client = new GeminiClient(apiKey)
     const prompt = 'write passing tests for these functions'
     const tests = await client.generateTests(prompt)
     await outputFile.addStatements(tests)

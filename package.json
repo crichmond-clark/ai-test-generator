@@ -12,6 +12,7 @@
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
+    "dotenv": "^16.4.5",
     "ts-morph": "^23.0.0"
   },
   "devDependencies": {

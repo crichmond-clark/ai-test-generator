@@ -1,20 +1,21 @@
-ai-auto-testgen
-=================
+# ai-auto-testgen
 
 A new CLI generated with oclif
-
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ai-auto-testgen.svg)](https://npmjs.org/package/ai-auto-testgen)
 [![Downloads/week](https://img.shields.io/npm/dw/ai-auto-testgen.svg)](https://npmjs.org/package/ai-auto-testgen)
 
-
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g ai-auto-testgen
 $ ai-auto-testgen COMMAND
@@ -26,22 +27,26 @@ USAGE
   $ ai-auto-testgen COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`ai-auto-testgen hello PERSON`](#ai-auto-testgen-hello-person)
-* [`ai-auto-testgen hello world`](#ai-auto-testgen-hello-world)
-* [`ai-auto-testgen help [COMMAND]`](#ai-auto-testgen-help-command)
-* [`ai-auto-testgen plugins`](#ai-auto-testgen-plugins)
-* [`ai-auto-testgen plugins add PLUGIN`](#ai-auto-testgen-plugins-add-plugin)
-* [`ai-auto-testgen plugins:inspect PLUGIN...`](#ai-auto-testgen-pluginsinspect-plugin)
-* [`ai-auto-testgen plugins install PLUGIN`](#ai-auto-testgen-plugins-install-plugin)
-* [`ai-auto-testgen plugins link PATH`](#ai-auto-testgen-plugins-link-path)
-* [`ai-auto-testgen plugins remove [PLUGIN]`](#ai-auto-testgen-plugins-remove-plugin)
-* [`ai-auto-testgen plugins reset`](#ai-auto-testgen-plugins-reset)
-* [`ai-auto-testgen plugins uninstall [PLUGIN]`](#ai-auto-testgen-plugins-uninstall-plugin)
-* [`ai-auto-testgen plugins unlink [PLUGIN]`](#ai-auto-testgen-plugins-unlink-plugin)
-* [`ai-auto-testgen plugins update`](#ai-auto-testgen-plugins-update)
+
+- [`ai-auto-testgen hello PERSON`](#ai-auto-testgen-hello-person)
+- [`ai-auto-testgen hello world`](#ai-auto-testgen-hello-world)
+- [`ai-auto-testgen help [COMMAND]`](#ai-auto-testgen-help-command)
+- [`ai-auto-testgen plugins`](#ai-auto-testgen-plugins)
+- [`ai-auto-testgen plugins add PLUGIN`](#ai-auto-testgen-plugins-add-plugin)
+- [`ai-auto-testgen plugins:inspect PLUGIN...`](#ai-auto-testgen-pluginsinspect-plugin)
+- [`ai-auto-testgen plugins install PLUGIN`](#ai-auto-testgen-plugins-install-plugin)
+- [`ai-auto-testgen plugins link PATH`](#ai-auto-testgen-plugins-link-path)
+- [`ai-auto-testgen plugins remove [PLUGIN]`](#ai-auto-testgen-plugins-remove-plugin)
+- [`ai-auto-testgen plugins reset`](#ai-auto-testgen-plugins-reset)
+- [`ai-auto-testgen plugins uninstall [PLUGIN]`](#ai-auto-testgen-plugins-uninstall-plugin)
+- [`ai-auto-testgen plugins unlink [PLUGIN]`](#ai-auto-testgen-plugins-unlink-plugin)
+- [`ai-auto-testgen plugins update`](#ai-auto-testgen-plugins-update)
 
 ## `ai-auto-testgen hello PERSON`
 
@@ -393,4 +398,5 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.6/src/commands/plugins/update.ts)_
+
 <!-- commandsstop -->

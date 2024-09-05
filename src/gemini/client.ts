@@ -1,7 +1,5 @@
 import {GoogleGenerativeAI} from '@google/generative-ai'
 
-const prompt = 'write passing tests for these functions'
-
 export default class GeminiClient {
   private GenAI: GoogleGenerativeAI
 

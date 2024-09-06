@@ -1,5 +1,5 @@
 import {Args, Command} from '@oclif/core'
-import findUnTestedFunctions from '../../utils/findUntestedFunctions.js'
+import findUnTestedFunctions from '../utils/findUntestedFunctions.js'
 
 export default class CountUntestedFunctions extends Command {
   static override args = {
@@ -17,7 +17,7 @@ export default class CountUntestedFunctions extends Command {
     // Iterate over the map and print the results
     for (const [functionName, filePaths] of untestedFunctionsMap) {
       filePaths.forEach((filePath) => {
-        this.log(`${filePath} - 1`) // Assuming each function is in one file
+        console.log(`${filePath} - 1`) // Assuming each function is in one file
       })
     }
   }

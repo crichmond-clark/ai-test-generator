@@ -1,8 +1,8 @@
 import {Args, Command} from '@oclif/core'
 import {Project} from 'ts-morph'
-import * as path from 'path'
-import {extractFunctionByName} from '../../utils/extractFunctionByName.js'
-import GeminiClient from '../../gemini/client.js'
+import {extractFunctionByName} from '../utils/extractFunctionByName.js'
+import GeminiClient from '../gemini/client.js'
+
 const apiKey = process.env.API_KEY || ''
 
 export default class TestFunction extends Command {

@@ -14,11 +14,12 @@ export default class CountUntestedFunctions extends Command {
 
     const untestedFunctionsMap = await findUnTestedFunctions(args.sourcePath, args.testFolderPath)
 
-    // Iterate over the map and print the results
-    for (const [functionName, filePaths] of untestedFunctionsMap) {
-      filePaths.forEach((filePath) => {
-        console.log(`${filePath} - 1`) // Assuming each function is in one file
-      })
+    // Loop through the untested functions and log file name and count
+    for (const [functionName, untestedFunctions] of Object.entries(untestedFunctionsMap)) {
+      const fileName = functionName.split(':')[0] // Extract file name from functionName
+      const count = untestedFunctions.length
+
+      console.log(`${fileName}: ${count} untested functions`)
     }
   }
 }

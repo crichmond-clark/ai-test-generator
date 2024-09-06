@@ -7,9 +7,9 @@ import {findTestedFunctions} from './findTestedFunctions.js'
 export default async function findUnTestedFunctions(
   fileOrDirectoryPath: string,
   testFolderPath: string,
-): Promise<Map<string, string[]>> {
+): Promise<{[fileName: string]: string[]}> {
   const project = new Project()
-  const allFunctions: string[] = []
+  const allFunctions: {fileName: string; functionText: string}[] = [] // Store file name and function text
   const stats = fs.statSync(fileOrDirectoryPath)
 
   if (stats.isDirectory()) {
@@ -20,16 +20,23 @@ export default async function findUnTestedFunctions(
 
     for (const file of sourceFiles) {
       const functions = extractFunctionsFromFile(project, file)
-      allFunctions.push(...functions.map((func) => func.name as string))
+      allFunctions.push(...functions.map((func) => ({fileName: file, functionText: func.text})))
     }
   }
 
   const testedFunctionsMap = await findTestedFunctions(testFolderPath, 'test')
 
-  const untestedFunctions = allFunctions.filter((funcName) => !testedFunctionsMap.has(funcName))
-  const untestedFunctionsMap = new Map<string, string[]>()
-  untestedFunctions.forEach((funcName) => {
-    untestedFunctionsMap.set(funcName, [])
+  const untestedFunctions = allFunctions.filter(
+    ({fileName, functionText}) => !Object.keys(testedFunctionsMap).includes(`${fileName}:${functionText}`),
+  )
+
+  const untestedFunctionsObject: {[fileName: string]: string[]} = {}
+  untestedFunctions.forEach(({fileName, functionText}) => {
+    if (!untestedFunctionsObject[fileName]) {
+      untestedFunctionsObject[fileName] = []
+    }
+    untestedFunctionsObject[fileName].push(functionText)
   })
-  return untestedFunctionsMap
+  console.log(untestedFunctionsObject)
+  return untestedFunctionsObject
 }

@@ -6,7 +6,7 @@ interface FunctionData {
   filePath: string
 }
 
-export function extractFunctionsFromFile(project: Project, filePath: string): FunctionData[] {
+export default function extractFunctionsFromFile(project: Project, filePath: string): FunctionData[] {
   const sourceFile = project.addSourceFileAtPath(filePath)
   const functionsArray = sourceFile.getFunctions()
 

@@ -13,6 +13,7 @@
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
     "dotenv": "^16.4.5",
+    "minimatch": "^10.0.1",
     "ts-morph": "^23.0.0"
   },
   "devDependencies": {
@@ -21,7 +22,7 @@
     "@types/chai": "^4",
     "@types/fs-extra": "^11.0.4",
     "@types/mocha": "^10",
-    "@types/node": "^18",
+    "@types/node": "^22.5.4",
     "chai": "^4",
     "eslint": "^8",
     "eslint-config-oclif": "^5",

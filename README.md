@@ -19,7 +19,7 @@ npm install -g ai-auto-testgen
 This command must be run on initial use and  will permanently set your Gemini API Key
 
 ```bash
-ai-auto-testgen set-api-key <api-key>
+ai-auto-testgen set-api-key -k <api-key>
 ```
 
 #### analyse

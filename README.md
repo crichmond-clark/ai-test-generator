@@ -15,6 +15,13 @@ npm install -g ai-auto-testgen
 ## Usage
 ### Commands
 
+#### set-api-key
+This command must be run on initial use and  will permanently set your Gemini API Key
+
+```bash
+ai-auto-testgen set-api-key <api-key>
+```
+
 #### analyse
 
 
@@ -28,13 +35,6 @@ ai-auto-testgen analyse <path> <test-folder-path>
 This command will take a given file or directory path, find all untested functions and return a list of tests in a new file name gemini_tests.ts
 ```bash
 ai-auto-testgen parse <path> <test-folder-path>
-```
-
-#### set-api-key
-This command will permanently set your Gemini API Key
-
-```bash
-ai-auto-testgen set-api-key <api-key>
 ```
 
 #### set-test-directory

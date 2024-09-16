@@ -6,7 +6,7 @@ import * as fs from 'fs'
 
 export default async function findTestedFunctions(
   testFolderPath: string,
-  testFilePatterns: string[] = ['*.test.ts', '*.spec.ts'],
+  testFilePatterns: string[] = ['*.test.ts', '*.spec.ts', '*.test.js', '*.spec.js'],
 ): Promise<{[filePath: string]: string[]}> {
   const project = new Project()
   const testedFunctionsByFile: {[filePath: string]: string[]} = {}

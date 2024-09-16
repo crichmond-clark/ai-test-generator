@@ -1,7 +1,7 @@
 import {Args, Command} from '@oclif/core'
 import findUnTestedFunctions from '../utils/findUntestedFunctions.js'
 
-export default class CountUntestedFunctions extends Command {
+export default class Analyse extends Command {
   static override args = {
     path: Args.string({description: 'source file or directory to analyze', required: true}),
     testFolderPath: Args.string({description: 'path to the test folder', required: true}),
@@ -10,7 +10,7 @@ export default class CountUntestedFunctions extends Command {
   static override description = 'This command will count the number of untested functions in a given file or directory'
 
   public async run(): Promise<void> {
-    const {args} = await this.parse(CountUntestedFunctions)
+    const {args} = await this.parse(Analyse)
 
     const untestedFunctionsMap = await findUnTestedFunctions(args.path, args.testFolderPath, 'analyse')
 
